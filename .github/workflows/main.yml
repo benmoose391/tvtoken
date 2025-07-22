@@ -36,6 +36,11 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
+      - name: dependencies
+        run: |
+          python3 -m pip install playwright
+          playwright install chromium
+
       - name: Main
         run: |
           pwd
